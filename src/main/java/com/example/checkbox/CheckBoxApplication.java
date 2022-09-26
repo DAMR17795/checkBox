@@ -44,7 +44,7 @@ public class CheckBoxApplication extends Application {
         //Marcar por defecto CheckBox 1
         cb1.setSelected(true);
 
-        //CheckBox con titulo
+        //CheckBox 2 con titulo
         CheckBox cb2 = new CheckBox("Soltero");
         grid.add(cb2, 0, 2);
     }
