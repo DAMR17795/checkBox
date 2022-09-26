@@ -7,6 +7,7 @@ import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
@@ -39,12 +40,29 @@ public class HelloApplication extends Application {
         cb1.setText("First");
         cb1.setSelected(true);
 
-        root.getChildren().addAll(cb1, cb2);
+        //root.getChildren().addAll(cb1, cb2);
         cb1.setAlignment(Pos.CENTER);
-        cb2.setAlignment(Pos.TOP_RIGHT);
+        cb2.setAlignment(Pos.CENTER);
 
         stage.setScene(scene);
         stage.show();
+
+        VBox caja1 = new VBox();
+        caja1.getChildren().add(cb1);
+        VBox caja2 = new VBox();
+        caja2.getChildren().add(cb2);
+        root.getChildren().addAll(caja1, caja2);
+
+        caja1.setAlignment(Pos.CENTER_RIGHT);
+        caja1.setSpacing(30);
+        caja2.setAlignment(Pos.CENTER_LEFT);
+
+
+
+
+
+
+
 
     }
 
