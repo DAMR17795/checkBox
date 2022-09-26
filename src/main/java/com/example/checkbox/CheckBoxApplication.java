@@ -39,14 +39,20 @@ public class CheckBoxApplication extends Application {
         grid.add(cb1, 0, 1);
 
         //Asignacion de titulo a CheckBox 1
-        cb1.setText("Casado");
+        cb1.setText("Marcado");
 
         //Marcar por defecto CheckBox 1
         cb1.setSelected(true);
 
         //CheckBox 2 con titulo
-        CheckBox cb2 = new CheckBox("Soltero");
+        CheckBox cb2 = new CheckBox("Desmarcado");
         grid.add(cb2, 0, 2);
+
+        //CheckBox 3 con título
+        CheckBox cb3 = new CheckBox("Indefinido");
+        cb3.setIndeterminate(true);
+        grid.add(cb3, 0, 3);
+        cb3.setAllowIndeterminate(true);
     }
 
     public static void main(String[] args) {
