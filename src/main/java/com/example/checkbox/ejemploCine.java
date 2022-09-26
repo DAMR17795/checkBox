@@ -33,7 +33,7 @@ public class ejemploCine extends Application {
 
         //Titulo EjemploCheckBox
         Text scenetitle = new Text("Ejemplo de CheckBox Géneros Cinemáticos");
-        Label sentence = new Label("Seleccione sus géneros cinematográficos favoritos\n(indeterminado si los desconoce)");
+        Label sentence = new Label("Seleccione sus géneros cinematográficos favoritos\n(indeterminado si los desconoc");
         grid.add(sentence, 0, 1);
         scenetitle.setFont(Font.font("Tahoma", FontWeight.NORMAL, 20));
         grid.add(scenetitle, 0, 0, 2, 1);
