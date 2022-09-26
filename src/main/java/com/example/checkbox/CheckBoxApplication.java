@@ -46,6 +46,7 @@ public class CheckBoxApplication extends Application {
 
         //CheckBox 2 con titulo
         CheckBox cb2 = new CheckBox("Desmarcado");
+        cb2.setSelected(false);
         grid.add(cb2, 0, 2);
 
         //CheckBox 3 con título
