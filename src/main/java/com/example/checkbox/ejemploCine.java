@@ -1,12 +1,17 @@
 package com.example.checkbox;
 
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
@@ -26,7 +31,7 @@ public class ejemploCine extends Application {
         grid.setVgap(10);
         grid.setPadding(new Insets(25, 25, 25, 25));
 
-        Scene scene = new Scene(grid, 450, 350);
+        Scene scene = new Scene(grid, 600, 600);
         stage.setScene(scene);
         stage.setTitle("CheckBox Wiki");
         stage.show();
@@ -76,5 +81,29 @@ public class ejemploCine extends Application {
         biografico .setSelected(false);
         grid.add(biografico , 0, 8);
         biografico.setAllowIndeterminate(true);
+
+        //Eventos - Raton entra y sale
+
+        accion.addEventHandler(MouseEvent.MOUSE_CLICKED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                Label label = new Label();
+                label.setText("Acción: Género de Acción");
+                grid.add(label, 1, 10);
+                label.setAlignment(Pos.CENTER);
+                label.setPadding(new Insets(3, 3, 3, 3));
+            }
+        });
+
+        drama.addEventHandler(MouseEvent.MOUSE_ENTERED, new EventHandler<MouseEvent>() {
+            @Override
+            public void handle(MouseEvent mouseEvent) {
+                Label label = new Label();
+                label.setText("Drama: Género de Dramático");
+                grid.add(label, 1, 9);
+                label.setAlignment(Pos.CENTER);
+                label.setPadding(new Insets(3, 3, 3, 3));
+            }
+        });
     }
 }
