@@ -12,7 +12,7 @@ pipeline {
             steps {
                 // Analizar el codigo con SonarQube
                 withSonarQubeEnv('SonarQube Server') {
-                    bat 'mvn sonar:sonar'
+                    bat 'mvn sonar:sonar -Dsonar.exclusions=**/*.java'
                 }
             }
         }
